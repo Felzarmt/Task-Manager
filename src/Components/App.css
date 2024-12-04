@@ -1,0 +1,135 @@
+/* Ocupa toda la página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.app {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  background: linear-gradient(to right, #4a00e0, #8e2de2); /* Degradado en el fondo */
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin: 0;
+  color: white; /* Texto blanco */
+}
+
+.header p {
+  font-size: 14px;
+  color: #ddd; /* Texto en tono gris claro */
+}
+
+.todo-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: #333;
+}
+
+.todo-input input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+}
+
+.todo-input button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #4a00e0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  color:#5f5f5f
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters button {
+  margin: 0 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #333;
+}
+
+.filters button.active {
+  border-bottom: 2px solid #4a00e0;
+}
+
+.todo-footer button {
+  background-color: transparent;
+  color: #4a00e0;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-footer span {
+  font-size: 14px;
+  color: #666;
+}
+
